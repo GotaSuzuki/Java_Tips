@@ -22,7 +22,8 @@ public class EnumUse {
     Time time = Time.values()[timeSchedule];
 
     if (week == Week.日曜日 ||
-        (week == Week.火曜日 && (time == Time.午前 || time == Time.夜間)) ||
+        (week == Week.火曜日 && time == Time.午前) ||
+        (week == Week.水曜日 && time == Time.夜間) ||
         (week == Week.金曜日 && time == Time.午前) ||
         (week == Week.土曜日 && (time == Time.午後 || time == Time.夜間))) {
       System.out.println("休診日");
